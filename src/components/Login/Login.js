@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Login.css";
 const Login = () => {
   return (
-    <div className="login d-flex justify-content-center align-items-center">
+    <div className="footer-fixed d-flex justify-content-center align-items-center">
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control type="email" placeholder="Enter email" />

@@ -3,7 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 const Signup = () => {
     return (
-        <div className='login d-flex align-items-center justify-content-center'>
+        <div className='footer-fixed d-flex align-items-center justify-content-center'>
             <Form >
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Control type="email" placeholder="Enter email" />
