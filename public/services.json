@@ -1,0 +1,44 @@
+[
+  {
+    "img": "https://i.ibb.co/FwnS1vN/1200-6637-breathing-exercises-photo2-740x510.jpg",
+    "name": "Gentie yoga",
+    "description": "YogaCoach offers different Yoga Teacher Training options: 350-hour and 500-hour training.  You can choose a learning pathway.",
+    "id": 1,
+    "price": 110
+  },
+  {
+    "img": "https://i.ibb.co/b3ZtgWX/active-activity-adult-864989-740x510.jpg",
+    "name": "Hatha yoga",
+    "description": "Anchored in the deep science of inner experience, this retreat style training program allows you the inner science of meditation.",
+    "id": 2,
+    "price": 100
+  },
+  {
+    "img": "https://i.ibb.co/h1swQtk/cathy-pham-479991-unsplash-740x510.jpg",
+    "name": "Be proactive",
+    "description": "With a yogaGuide Therapist Care Plan - Personalized lifestyle, diet, and exercise plans based on your results. The program allows you.",
+    "id": 3,
+    "price": 90
+  },
+  {
+    "img": "https://i.ibb.co/47W7rdY/dominic-lowyears-122568-unsplash-740x510.jpg",
+    "name": "Yin yoga",
+    "description": "yogaGuide Yoga shows you how to remove the obstacles the greatest expression of yourself and living your wildest dreams",
+    "id": 4,
+    "price": 60
+  },
+  {
+    "img": "https://i.ibb.co/xs8KPB9/form-426165-unsplash-1-740x510.jpg",
+    "name": "Power yoga",
+    "description": "yogaGuide Yoga embraces all styles of Yoga. We create workshops and events for yoga to deepen their spiritual practice and knowledge.",
+    "id": 5,
+    "price": 130
+  },
+  {
+    "img": "https://i.ibb.co/N72NgLX/i-yunmai-617621-unsplash-740x510.jpg",
+    "name": "Pranayama yoga",
+    "description": "In yogaGuide Yoga you will gain direct experience, understanding and mentoring for guiding and teaching others meditation.",
+    "id": 6,
+    "price": 59
+  }
+]

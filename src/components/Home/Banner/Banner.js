@@ -1,12 +1,12 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import banner1 from '../../images/banner/banner1.png';
-import banner2 from '../../images/banner/banner2.png';
-import banner3 from '../../images/banner/banner3.png';
-const Home = () => {
+import banner1 from '../../../images/banner/banner1.png';
+import banner2 from '../../../images/banner/banner2.png';
+import banner3 from '../../../images/banner/banner3.png';
+const Banner = () => {
     return (
         <div>
-          <Carousel fade>
+            <Carousel fade>
   <Carousel.Item>
     <img
       className="d-block w-100"
@@ -14,8 +14,7 @@ const Home = () => {
       alt="First slide"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <p className='md:fs-2 fw-bold'>Find your inner beauty through yoga and mediation</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -26,8 +25,7 @@ const Home = () => {
     />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p className='md:fs-2 fw-bold'>"You cannot always control what goes on outside. But you can always control what goes on inside."</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -38,8 +36,7 @@ const Home = () => {
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <p className='md:fs-2 fw-bold'>"A flower does not think of competing to the flower next to it. It just blooms."</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
@@ -47,4 +44,4 @@ const Home = () => {
     );
 };
 
-export default Home;<h2>This is home</h2>
+export default Banner;
