@@ -5,7 +5,7 @@ const Service = ({service}) => {
     const {img,name,description,price} =service
     return (
         <div className='col-md-4'>
-             <Card style={{ width: '18rem' }}>
+             <Card style={{ width: '22rem' }}>
   <Card.Img variant="top" src={img} />
   <Card.Body>
     <Card.Title>{name}</Card.Title>

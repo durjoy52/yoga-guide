@@ -1,6 +1,12 @@
-.about-banner {
+.about-banner img {
   box-shadow: -15px 15px 0 #ffc03f;
 }
 .about-me {
   color: #5170b2;
+}
+@media screen and (max-width: 668px) {
+  .about-banner {
+    width: 20rem;
+    margin: 0 auto;
+  }
 }

@@ -3,7 +3,7 @@ import about from '../../../images/about.jpg';
 import './AboutMe.css';
 const AboutMe = () => {
     return (
-        <div className='container mx-auto d-flex gap-4 mt-3'>
+        <div className='container mx-auto d-flex flex-column-reverse flex-md-row gap-3 mt-3'>
             <div>
                 <h2 className='text-center text-danger'>About Me</h2>
                 <div className='d-flex align-items-center h-100'>
@@ -13,7 +13,9 @@ const AboutMe = () => {
                 </div>
             </div>
             <div className='about-banner'>
+                <div>
                 <img className='img-fluid' src={about} alt="" />
+                </div>
             </div>
         </div>
     );
