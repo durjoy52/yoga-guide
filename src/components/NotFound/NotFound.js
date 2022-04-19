@@ -3,7 +3,7 @@ import React from 'react';
 const NotFound = () => {
     return (
         <div className='footer-fixed'>
-            <h1>404 Sorry, This page is not founded</h1>
+            <h1 className='text-center text-danger'>404 Sorry, This page is not founded</h1>
         </div>
     );
 };
