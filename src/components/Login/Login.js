@@ -25,13 +25,12 @@ const Login = () => {
     if (error) {
       toast.error(error.message,{id:'error'})
     }
-    const resetPassword = async(event) =>{
-      const email = event.target.email.value;
+    const resetPassword = async() =>{
       if(email){
         await sendPasswordResetEmail(email)
-      toast('Sent email')
+      toast('Sent email',{id:'toast'})
       }else{
-        toast('please enter your email address')
+        toast('please enter your email address',{id:'toast'})
       }
     }
   const handleEmail = event =>{
@@ -53,10 +52,7 @@ const Login = () => {
         </Form.Group>
 
         <Form.Group className="mb-2" controlId="formBasicPassword">
-          <Form.Control onBlur={handlePassword} type="password" placeholder="Password" required/>
-        </Form.Group>
-        <Form.Group className="mb-2" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
+          <Form.Control onBlur={handlePassword} type="password" placeholder="Password" />
         </Form.Group>
         <p className="mb-0">
         Forget Password?

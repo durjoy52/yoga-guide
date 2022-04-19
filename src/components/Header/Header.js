@@ -29,7 +29,7 @@ const Header = () => {
             </Nav.Link>
             <Nav.Link
               href="/home#services"
-              onClick={() => navigate('/')}
+              onClick={() => navigate('/home#services')}
             >
               Services
             </Nav.Link>
@@ -47,6 +47,9 @@ const Header = () => {
            }
             <Nav.Link as={CustomLink} to="/blogs">
               Blogs
+            </Nav.Link>
+            <Nav.Link as={CustomLink} to="/about">
+              AboutMe
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
