@@ -1,33 +1,31 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile
+} from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase/firebase.init";
 import Loading from "../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 const Signup = () => {
-  const navigate =useNavigate()
+  const [updateProfile, updating, error] = useUpdateProfile(auth);
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userName, setUserName] = useState("");
   const [agree, setAgree] = useState(true);
-  const [
-    createUserWithEmailAndPassword,
-    user,
-    loading,
-    error,
-  ] = useCreateUserWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user, loading, error1] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   if (user) {
     console.log(user);
-    toast.success('Account created',{id:'created'})
-    navigate('/')
-
+    navigate("/");
   }
-  if (error) {
-    toast.error(error.message,{id:'error'});
+  if (error || error1) {
+    toast.error(error?.message, { id: "error" });
   }
-  if (loading) {
+  if (loading || updating) {
     return <Loading />;
   }
 
@@ -39,10 +37,13 @@ const Signup = () => {
   };
   const handlePassword = (e) => {
     setPassword(e.target.value);
+    
   };
-  const handleSignUp = (event) => {
+  const handleSignUp = async (event) => {
     event.preventDefault();
-    createUserWithEmailAndPassword(email, password);
+    await createUserWithEmailAndPassword(email, password);
+    await updateProfile({ displayName: userName });
+    console.log("Updated profile");
   };
   return (
     <div className="footer-fixed">
@@ -69,6 +70,7 @@ const Signup = () => {
               onBlur={handlePassword}
               type="password"
               placeholder="Password"
+              minLength={8}
               required
             />
           </Form.Group>

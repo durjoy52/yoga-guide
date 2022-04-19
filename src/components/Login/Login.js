@@ -12,21 +12,18 @@ const Login = () => {
   const [password,setPassword] =useState('')
   const location = useLocation()
   const navigate = useNavigate();
-  const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+  const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
     const from = location.state?.from?.pathname || "/"
     if (user) {
       toast.success('Login successful',{id:'success'})
       navigate(from,{replace:true});
     }
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
-      auth
-    );
     if(loading || sending){
       return <Loading></Loading>
     };
     if (error) {
-      toast.error(error,{id:'error'})
+      toast.error(error.message,{id:'error'})
     }
     const resetPassword = async(event) =>{
       const email = event.target.email.value;
@@ -61,19 +58,18 @@ const Login = () => {
         <Form.Group className="mb-2" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
-        <Button variant="primary" type="submit">
-          Login
-        </Button>
-        <p>
+        <p className="mb-0">
         Forget Password?
         <button
-          
           className="btn btn-link text-primary pe-auto text-decoration-none"
           onClick={resetPassword}
         >
           Reset Password
         </button>
       </p>
+        <Button variant="primary mb-2" type="submit">
+          Login
+        </Button>
         <p>Want to Create a new Account?<Link className='text-decoration-none pe-auto' to='/signup' >Create Account</Link></p>
       </Form>
     </div>
